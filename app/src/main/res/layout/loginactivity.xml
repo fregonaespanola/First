@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:background="@color/redp"
+    android:background="@drawable/gradient"
     >
 <!--
     <TextView
@@ -23,6 +23,13 @@
 
 
         />-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitStart"
+        android:id="@+id/girl"
+        >
+    </ImageView>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_username"
@@ -115,6 +122,8 @@
         >
 
     </ImageView>
+
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/left_guide"
