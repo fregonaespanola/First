@@ -1,4 +1,4 @@
-package com.example.fundamentals;
+package com.dgarcia.first;
 
 import org.junit.Test;
 

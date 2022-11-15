@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.fundamentals">
+    package="com.dgarcia.first">
 
     <application
         android:allowBackup="true"
@@ -14,11 +14,11 @@
         android:theme="@style/MyTheme"
         tools:targetApi="31">
         <activity
-            android:name=".SignUpActivity"
+            android:name="com.dgarcia.first.SignUpActivity"
             android:exported="false"
             android:theme="@style/MyTheme.NoActionBar"/>
         <activity
-            android:name=".LoginActivity"
+            android:name="com.dgarcia.first.LoginActivity"
             android:exported="true"
             android:theme="@style/MyTheme.NoActionBar">
             <intent-filter>
