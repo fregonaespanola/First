@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignUpActivity"
-    android:background="@color/redp">
+    android:background="@drawable/gradient">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_username"
@@ -81,13 +81,13 @@
     </Button>
 
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="150dp"
+        android:layout_width="150dp"
+        android:layout_height="160dp"
         android:layout_marginTop="150dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/logofoodier"
+        android:background="@drawable/logofoodier"
         android:id="@+id/log"
         >
 

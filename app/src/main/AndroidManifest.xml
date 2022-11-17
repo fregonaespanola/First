@@ -14,18 +14,23 @@
         android:theme="@style/MyTheme"
         tools:targetApi="31">
         <activity
-            android:name="com.dgarcia.first.SignUpActivity"
-            android:exported="false"
-            android:theme="@style/MyTheme.NoActionBar"/>
-        <activity
-            android:name="com.dgarcia.first.LoginActivity"
+            android:name=".Splash"
             android:exported="true"
             android:theme="@style/MyTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+        </activity>
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false"
+            android:theme="@style/MyTheme.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:theme="@style/MyTheme.NoActionBar">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
