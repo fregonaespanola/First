@@ -38,7 +38,7 @@ public class Splash extends AppCompatActivity {
             {
                 foodier.startAnimation(myanim2);
             }
-        }, 500);
+        }, 1000);
 
         new Handler().postDelayed(new Runnable()
         {
@@ -47,7 +47,7 @@ public class Splash extends AppCompatActivity {
             {
                 foodier.startAnimation(myanim3);
             }
-        }, 1200);
+        }, 2100);
 
         ImageView mFood = findViewById(R.id.mFood);
 
