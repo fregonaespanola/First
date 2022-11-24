@@ -13,7 +13,7 @@ para poder añadir un delay y que no se ejecuten todas a la vez, de modo que que
 se declara en este Java para optimizar recursos y seguidamente un método para que se abra la aplicación transcurridos 5 segundos.
 
 
-![IMAGEN DE TEXTOS](./img/splashscreenshot.PNG)
+![IMAGEN DE TEXTOS](./img/splashscreenshot.png)
 
 ## Colores cambiados
 Para los colores se realizaron dos cambios importantes, los cambios para el modo diurno y los cambios para el
