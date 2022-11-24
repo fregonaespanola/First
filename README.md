@@ -3,7 +3,7 @@ Realización del proyecto first en conjunto con la aplicación realizada en figm
 
 ## Splash Screen - Pantalla de inicio
 
-En la pantalla de inicio podemos encontrar poca cosa, ya que es una pantalla simple, sin embargo, podemos observar que cuenta con una imgen de fondo de unos cupcakes, extraída de 
+En la [pantalla de inicio](./app/src/main/res/layout/activity_splash.xml) podemos encontrar poca cosa, ya que es una pantalla simple, sin embargo, podemos observar que cuenta con una imgen de fondo de unos cupcakes, extraída de 
 [unsplash](https://unsplash.com/photos/fa59muUjyec) y con un TextView por encima el cual ocupa toda la pantalla el cual es del color principal de la aplicación con la peculiaridad
 del atributo alpha para poder modificar la opacidad. A su vez también dispone del logo de la propia aplicación centrado en medio de la pantalla y justo debajo otro TextView con el
 nombre de la aplicación con una "FontFamily" descargada desde el propio Android Studio, denominada [Amaranth_bold](./app/src/main/res/font/amaranth_bold.xml).
@@ -15,30 +15,16 @@ se declara en este Java para optimizar recursos y seguidamente un método para q
 
 ![IMAGEN DE TEXTOS](./img/splashscreenshot.png)
 
-## Colores cambiados
-Para los colores se realizaron dos cambios importantes, los cambios para el modo diurno y los cambios para el
-modo oscuro.
+## Ventana de Login - Inicio de sesión
 
-Para el modo diurno procedí a realizar cambios en [values/themes.xml](https://github.com/fregonaespanola/MaterialThemeBuilder/blob/master/app/src/main/res/values/themes.xml) para cambiar el aspecto general de la aplicación,
-es decir, los colores primarios y secundarios para la misma.
-Seguidamente en [values/colors.xml](https://github.com/fregonaespanola/MaterialThemeBuilder/blob/master/app/src/main/res/values/colors.xml) también se realizaron cambios pero estos afectarían a ambos modos.
+En la acitividad XML del Login denominada [LoginActivity](./app/src/main/res/layout/loginactivity.xml) podemos encontrar en primera instancia que no tiene un color sólido como fondo,
+sino que tiene añadido un [gradiente](./app/src/main/res/drawable/gradient.xml) con distintas tonalidades de rojos (saturadas y con mayor luminosidad). Seguidamente encontramos el logo,
+y a raíz de el mismo se realizarán los distintos posicionamientos de los demás items que encontraremos. Seguidamente encontramos dos textfields que actúan como inputs para poder introducir
+tanto nuestro nombre como nuestra contraseña mediante un EditText, y tienen la peculiaridad de que en la parte izquierda de estos campos contienen una imagen (en este caso predeterminada de
+Android Studio) la cual se introduce gracias al atributo "startIconDrawable" en el text field. La contraseña a su vez cuenta con el atributo "passwordToggleEnabled" para poder ver lo que estamos
+escribiendo de contraseña o no (ya depende del usuario).
 
-![IMAGEN DE COLORES DIURNOS](./img/3.PNG)
+Seguidamente, nos encontramos con los botones de Login (el cual acciona el método "openMain" si se clickea) y el botón Cancelar. Y después, encontramos un TextView por si no tenemos una cuenta
+creada poder acceder a la actividad [SignUp](./app/src/main/res/layout/signupactivity.xml) mediante su click. Y por último unos márgenes seguros para poder centrar los items.
 
-Para el modo nocturno, ví que existía una caperta llamada [values-night](./app/src/main/res/values-night/themes.xml) la cual contenía un archivo themes.xml el cual
-era igual que el diurno así que procedí a realizar los cambios.
-
-![IMAGEN DE COLORES NOCTURNOS](./img/4.PNG)
-
-## Ramas
-
-La única rama existente es master así que todos los cambios están realizados ahí.
-
-## Datos para subirlo a GitHub
-
-Por un error que desconozco no me dejaba hacer el commit desde Android Studio por lo que se tuvo que realizar
-de la siguiente manera.
-
-1. Hacer el add desde el AndroidStudio.
-2. Hacer el commit desde la terminal Git Bash.
-3. Volver al AndroidStudio para poder realizar el push mediante el link del repositorio.
+Otra peculiaridad, es que también contamos con [la vista en horizontal de este layout](./app/src/main/res/layout-land/loginactivity.xml), que nos permite

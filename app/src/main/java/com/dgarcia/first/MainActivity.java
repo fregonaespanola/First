@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adaptador);
 
     }
-
+        //system.exit(0);
 
     public void showAlertDialogButtonClicked(MainActivity mainActivity) {
 
