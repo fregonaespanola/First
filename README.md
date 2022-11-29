@@ -76,4 +76,4 @@ y poder ser usados en un futuro.
 
 Otra función que tiene es que "Refresh" el cual hace un reload del MainActivity (únicamente) y mostrará un texto.
 
-![IMAGEN DE REFRESH](./img/context2screenshot.png)
+![IMAGEN DE REFRESH](./img/refresh2screenshot.png)
