@@ -74,6 +74,6 @@ y poder ser usados en un futuro.
 
 ![IMAGEN SEGUNDA DEL CONTEXT](./img/context2screenshot.png)
 
-Otra función que tiene es que "Refresh" el cual hace un reload del MainActivity (únicamente) y mostrará un texto.
+Otra función que tiene es que "Refresh" el cual hace un reload y mostrará un texto.
 
 ![IMAGEN DE REFRESH](./img/refresh2screenshot.png)
