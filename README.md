@@ -52,7 +52,7 @@ A su vez esta ventana también dispone de una [vista horizontal](./app/src/main/
 
 Esta actividad denominada [MainActivity](./app/src/main/res/layout/activity_main.xml) lo único que podemos apreciar es un RecyclerView, el cual está listando items
 de [itembandeja.xml](./app/src/main/res/layout/activity_main.xml) el cual se utilizará para poder simular una "feed" de una red social la cual podría ser similar
-a la de Twitter.
+a la de Twitter. Aunque también está dentro del código la práctica de poder visualizar la web de imágenes.
 
 ![IMAGEN MAINACTIVITY](./img/mainscreenshot.png)
 

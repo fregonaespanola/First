@@ -65,13 +65,11 @@ public class MainActivity extends AppCompatActivity {
         registerForContextMenu(mycontext);
 
 
-        // DENTRO del Oncreate
         // cast al Layout SwipeRefresh con el que rodeamos la vista
         // en el xml y le colocamos un listener
         swipeLayout = (SwipeRefreshLayout) findViewById(R.id.myswipe);
         swipeLayout.setOnRefreshListener(mOnRefreshListener);
 
-        //La vista dentro es un webview con permiso para zoom
         miVisorWeb = (WebView) findViewById(R.id.vistaweb);
 //        miVisorWeb.getSettings().setJavaScriptEnabled(true);
 //        miVisorWeb.getSettings().setBuiltInZoomControls(true);
@@ -84,9 +82,9 @@ public class MainActivity extends AppCompatActivity {
 
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
 
-        builder.setTitle("QUEDATE EN FOODIER");
-        builder.setMessage("¿Estás seguro de que te quieres ir?");
         builder.setCancelable(false);
+
+        builder.setView(getLayoutInflater().inflate(R.layout.alertdialog_view, null));
 
 
         builder.setPositiveButton("Sign out", new DialogInterface.OnClickListener() {
