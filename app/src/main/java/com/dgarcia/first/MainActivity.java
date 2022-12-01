@@ -59,6 +59,24 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(adaptador);
 
+
+        /*
+        WebView mycontext = (WebView) findViewById(R.id.vistaweb);
+        registerForContextMenu(mycontext);
+
+
+        // DENTRO del Oncreate
+        // cast al Layout SwipeRefresh con el que rodeamos la vista
+        // en el xml y le colocamos un listener
+        swipeLayout = (SwipeRefreshLayout) findViewById(R.id.myswipe);
+        swipeLayout.setOnRefreshListener(mOnRefreshListener);
+
+        //La vista dentro es un webview con permiso para zoom
+        miVisorWeb = (WebView) findViewById(R.id.vistaweb);
+//        miVisorWeb.getSettings().setJavaScriptEnabled(true);
+//        miVisorWeb.getSettings().setBuiltInZoomControls(true);
+        miVisorWeb.loadUrl("https://thispersondoesnotexist.com");
+        */
     }
         //system.exit(0);
 
