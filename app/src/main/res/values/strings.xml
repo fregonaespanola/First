@@ -3,6 +3,6 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="haveusignup">Have you got an account? Sign up here</string>
-    <string name="login">Have you got an account? Sign up here</string>
+    <string name="login">LOGIN</string>
     <string name="cancel">CANCEL</string>
 </resources>

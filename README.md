@@ -1,4 +1,4 @@
-# Realización del proyecto First
+# Realización del proyecto First de Daniel García Ayala
 Realización del proyecto first en conjunto con la aplicación realizada en figma "Foodier".
 
 ## Splash Screen - Pantalla de inicio
@@ -77,3 +77,29 @@ y poder ser usados en un futuro.
 Otra función que tiene es que "Refresh" el cual hace un reload y mostrará un texto.
 
 ![IMAGEN DE REFRESH](./img/refresh2screenshot.png)
+
+## Popup del AlertDialog - Actividad principal
+
+Se ha creado el xml de [la vista del AlertDialog](./app/src/main/res/layout/alertdialog_view.xml) a modo de poder personalizar los textos que queremos que salgan cuando este cuadro de texto
+se activé, el cual es llamado en la [MainActivity(Java)](./app/src/main/res/layout/activity_main.xml) y nos permite ver estos textos gracias al método getLayoutInflater, dentro del showAlertDialogButtonClicked.
+
+![IMAGEN DEL ALERT DIALOG](./img/alertdialog.png)
+
+## Creación de la internacionalización - Distintos idiomas sobre String.xml
+
+Se ha creado el archivo [strings.xml en español](./app/src/main/res/values-es-rES/strings.xml) para poder traducir todas
+las variables de string, en el caso de que el idioma del dispositivo sea español en vez de inglés (en este caso).
+
+A continuación se mostrarán dos imágenes comparativas de como sería en ambos idiomas.
+
+![IMAGEN DEL IDIOMA ESPAÑOL](./img/idiomaesp.png) ![IMAGEN DEL IDIOMA INGLÉS](./img/idiomaing.png)
+
+## Creación del modo nocturno - Distintos valores sobre colors.xml
+
+Se ha creado el archivo [colors.xml de modo nocturno](./app/src/main/res/values-night/colors.xml) para que, si el dispositivo que
+está usando nuestra aplicación está con el modo nocturno, también denominado oscuro, los colores de la aplicación se
+ajusten al mismo, siendo los deseados por nosotros, mostrados en el archivo xml anteriormente mencionado.
+
+A continuación se mostrarán dos imágenes comparativas de como sería en ambos modos.
+
+![IMAGEN DEL MODO DIURNO](./img/idiomaing.png) ![IMAGEN DEL MODO NOCTURNO](./img/modonocturno.png)
