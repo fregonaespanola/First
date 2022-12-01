@@ -19,7 +19,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="UserName"
+            android:hint="@string/username"
             android:background="@color/white"
             android:inputType="text"/>
 
@@ -55,7 +55,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Password"
+            android:hint="@string/password"
             android:background="@color/white"
             android:inputType="textPassword"
             />
@@ -63,7 +63,7 @@
     </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/login"
-        android:text="SIGN UP"
+        android:text="@string/signup"
         android:onClick="paginaSiguiente"
         app:layout_constraintTop_toBottomOf="@id/til_password"
         app:layout_constraintStart_toStartOf="@id/left_guide"
@@ -72,7 +72,7 @@
     </Button>
 
     <Button
-        android:text="cancel"
+        android:text="@string/cancel"
         android:onClick="paginaSiguiente"
         android:id="@+id/cancel"
         app:layout_constraintStart_toEndOf="@id/login"

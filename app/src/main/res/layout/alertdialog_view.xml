@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tv1dialog"
-        android:text="QUEDATE EN FOODIER"
+        android:text="@string/adup"
         android:textSize="16sp"
         android:textColor="@color/black"
         android:layout_margin="16dp"
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toBottomOf="@id/tv1dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¿Estás seguro de que te quieres ir?"
+        android:text="@string/addown"
         android:textSize="16sp"
         android:layout_margin="16dp"
         >

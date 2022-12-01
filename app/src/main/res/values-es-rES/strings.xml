@@ -6,4 +6,7 @@
     <string name="haveusignup">No tienes una cuenta? Regístrate</string>
     <string name="login">INGRESA</string>
     <string name="cancel">CANCELAR</string>
+    <string name="adup">QUÉDATE EN FOODIER</string>
+    <string name="addown">¿Estás seguro de que quieres salir?</string>
+    <string name="signup">REGISTRARSE</string>
 </resources>

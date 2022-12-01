@@ -5,4 +5,7 @@
     <string name="haveusignup">Have you got an account? Sign up here</string>
     <string name="login">LOGIN</string>
     <string name="cancel">CANCEL</string>
+    <string name="adup">STAY IN FOODIER</string>
+    <string name="addown">Are you sure you want to quit?</string>
+    <string name="signup">SIGN UP</string>
 </resources>
