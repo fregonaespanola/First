@@ -1,28 +1,37 @@
 package com.dgarcia.first;
 
+import androidx.annotation.IdRes;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ContextMenu;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Toast;
 
+import com.dgarcia.first.databinding.ActivityMainBinding;
+import com.dgarcia.first.main.SectionsPagerAdapter;
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
+/*
     private SwipeRefreshLayout swipeLayout;
     private RecyclerView recyclerView;
     private ArrayList<item_bandeja> datos;
@@ -74,10 +83,10 @@ public class MainActivity extends AppCompatActivity {
 //        miVisorWeb.getSettings().setJavaScriptEnabled(true);
 //        miVisorWeb.getSettings().setBuiltInZoomControls(true);
         miVisorWeb.loadUrl("https://thispersondoesnotexist.com");
-        */
+
     }
         //system.exit(0);
-
+/*
     public void showAlertDialogButtonClicked(MainActivity mainActivity) {
 
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
@@ -86,7 +95,8 @@ public class MainActivity extends AppCompatActivity {
 
         builder.setView(getLayoutInflater().inflate(R.layout.alertdialog_view, null));
 
-
+*/
+    /*
         builder.setPositiveButton("Sign out", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -198,3 +208,96 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
+*/
+
+    private ActivityMainBinding binding;
+    private MenuItem prevMenuItem;
+    private SectionsPagerAdapter sectionsPagerAdapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        ViewPager viewPager1 = findViewById(R.id.view_pager);
+        viewPager1.setAdapter(sectionsPagerAdapter);
+
+
+
+
+
+        BottomNavigationView mybottomNavView = findViewById(R.id.nav_view);
+
+        BottomNavigationMenuView bottomNavigationMenuView =
+                (BottomNavigationMenuView) mybottomNavView.getChildAt(0);
+        View v = bottomNavigationMenuView.getChildAt(2);
+        BottomNavigationItemView itemView = (BottomNavigationItemView) v;
+        mybottomNavView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()) {
+                    case R.id.navigation_home:
+                        item.setChecked(true);
+                        removeBadge(mybottomNavView,item.getItemId());
+                        viewPager1.setCurrentItem(0);
+                        break;
+
+                    case R.id.navigation_dashboard:
+                        item.setChecked(true);
+                        removeBadge(mybottomNavView,item.getItemId());
+                        viewPager1.setCurrentItem(1);
+                        break;
+
+                    case R.id.navigation_notifications:
+                        item.setChecked(true);
+                        removeBadge(mybottomNavView,item.getItemId());
+                        viewPager1.setCurrentItem(2);
+                        break;
+
+
+
+
+                }
+                return false;
+            }
+        });
+
+        viewPager1.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if (prevMenuItem != null) {
+                    prevMenuItem.setChecked(false);
+                } else {
+                    mybottomNavView.getMenu().getItem(0).setChecked(false);
+                    mybottomNavView.getMenu().getItem(position).setChecked(true);
+                    removeBadge(mybottomNavView, mybottomNavView.getMenu().getItem(position).getItemId());
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+
+
+            });
+
+        }
+
+    public void removeBadge(BottomNavigationView bottomNavigationView, @IdRes int itemId) {
+        BottomNavigationItemView itemView = bottomNavigationView.findViewById(itemId);
+        if (itemView.getChildCount() == 3) {
+            itemView.removeViewAt(2);
+        }
+    }
+}
+
+

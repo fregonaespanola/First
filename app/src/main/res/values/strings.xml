@@ -8,4 +8,7 @@
     <string name="adup">STAY IN FOODIER</string>
     <string name="addown">Are you sure you want to quit?</string>
     <string name="signup">SIGN UP</string>
+    <string name="title_home" translatable="false">Home</string>
+    <string name="title_dashboard" translatable="false">Dashboard</string>
+    <string name="title_notifications" translatable="false">Notifications</string>
 </resources>
